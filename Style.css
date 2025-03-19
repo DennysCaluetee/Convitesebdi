@@ -12,6 +12,7 @@ body {
     overflow: hidden;
 }
 
+/* Título */
 .title {
     font-size: 28px;
     font-weight: bold;
@@ -25,6 +26,7 @@ body {
     text-transform: uppercase;
 }
 
+/* Container para os Cards */
 .container {
     width: 100%;
     height: calc(100vh - 100px);
@@ -36,12 +38,13 @@ body {
     gap: 10px;
     padding: 15px;
     box-sizing: border-box;
-    font-size: 38px;
+    font-size: 18px; /* Ajuste do tamanho da fonte para telas maiores */
     font-weight: bold;
     color: white;
     letter-spacing: 2px;
 }
 
+/* Estilos do Card */
 .card {
     padding: 15px;
     background: linear-gradient(135deg, #007bff, #0056b3);
@@ -53,6 +56,7 @@ body {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 250px;
+    margin: 10px;
 }
 
 .card:hover {
@@ -61,19 +65,20 @@ body {
     cursor: pointer;
 }
 
+/* Progress Bar */
 .progress-container {
     position: relative;
     width: 220px;
     height: 25px;
-    background: #fff; /* Painel branco atrás */
+    background: #fff;
     border-radius: 12px;
 }
 
 .progress-bar {
     position: relative;
-    width: 100%; /* Alterado para ocupar todo o container */
+    width: 100%;
     height: 25px;
-    background: linear-gradient(90deg, #4caf50, #8bc34a); /* Gradiente da barra */
+    background: linear-gradient(90deg, #4caf50, #8bc34a);
     border-radius: 12px;
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -93,12 +98,13 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: #000; /* Cor da letra da porcentagem alterada para preto */
+    color: #000;
     font-size: 14px;
     font-weight: bold;
     z-index: 10;
 }
 
+/* Tela */
 .tela {
     display: none;
 }
@@ -107,6 +113,22 @@ body {
     display: block;
 }
 
+/* Media Queries para TV de 42 polegadas (ou dispositivos grandes) */
+@media (min-width: 1280px) {
+    /* Ajustando o tamanho da fonte e a largura do card para telas grandes */
+    .title {
+        font-size: 36px; /* Aumentando o tamanho da fonte para uma visualização melhor */
+    }
+    .container {
+        font-size: 22px; /* Aumentando a fonte no container para facilitar a leitura */
+        padding: 30px;
+    }
+    .card {
+        max-width: 300px; /* Aumentando o tamanho máximo dos cards */
+    }
+}
+
+/* Animação de Shake */
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-3px); }
