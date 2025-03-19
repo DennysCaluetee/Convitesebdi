@@ -38,7 +38,7 @@ body {
     gap: 10px;
     padding: 15px;
     box-sizing: border-box;
-    font-size: 18px; /* Ajuste do tamanho da fonte para telas maiores */
+    font-size: 18px; /* Ajuste do tamanho da fonte para telas grandes */
     font-weight: bold;
     color: white;
     letter-spacing: 2px;
@@ -113,18 +113,18 @@ body {
     display: block;
 }
 
-/* Media Queries para TV de 42 polegadas (ou dispositivos grandes) */
-@media (min-width: 1280px) {
-    /* Ajustando o tamanho da fonte e a largura do card para telas grandes */
+/* Media Queries para TV de 32 polegadas */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    /* Ajustando o tamanho da fonte e a largura do card para TVs de 32 polegadas */
     .title {
-        font-size: 36px; /* Aumentando o tamanho da fonte para uma visualização melhor */
+        font-size: 32px; /* Aumentando o tamanho da fonte para melhorar a visibilidade */
     }
     .container {
-        font-size: 22px; /* Aumentando a fonte no container para facilitar a leitura */
-        padding: 30px;
+        font-size: 20px; /* Ajustando o tamanho da fonte no container */
+        padding: 20px;
     }
     .card {
-        max-width: 300px; /* Aumentando o tamanho máximo dos cards */
+        max-width: 280px; /* Aumentando um pouco o tamanho máximo dos cards */
     }
 }
 
